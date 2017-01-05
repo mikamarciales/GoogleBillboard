@@ -3,11 +3,16 @@ public void setup()
 {          
 	int x = 2;
 	int y = 12;
-	String digits = e.substring(x,y);
-	double dNum = Double.parseDouble(digits);
-	System.out.println(dNum);
-    //noLoop();
-    for(int i = 2;)  
+	
+    for(int i = 2; i < e.length()-10; i++) 
+    {
+    	x++;
+    	y++;
+		String digits = e.substring(x, y);
+		double dNum = Double.parseDouble(digits);
+    	isPrime(dNum);
+    }
+
 }  
 public void draw()  
 {   
@@ -22,5 +27,6 @@ public boolean isPrime(double dNum)
     		return false;
     	}
     }
+    System.out.println(dNum);
     return true;  
 } 
